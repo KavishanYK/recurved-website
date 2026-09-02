@@ -27,14 +27,14 @@ export default function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="scroll-mt-16 border-t border-accent/15 bg-white/55 px-5 py-14 sm:py-20">
+    <section id="faq" className="scroll-mt-16 border-t border-accent/15 bg-black/25 px-5 py-14 sm:py-20">
       <div className="mx-auto max-w-3xl">
         <Reveal>
-          <h2 className="text-center font-serif text-2xl font-semibold text-dark sm:text-3xl">
+          <h2 className="text-center font-serif text-2xl font-semibold text-cream sm:text-3xl">
             Questions you might have
           </h2>
         </Reveal>
-        <Reveal delay={0.1} className="mt-8 divide-y divide-black/10 rounded-2xl border border-black/5 bg-white shadow-md shadow-black/5">
+        <Reveal delay={0.1} className="mt-8 divide-y divide-white/10 rounded-2xl border border-white/10 bg-surface shadow-md shadow-black/20">
           {faqs.map((faq, i) => {
             const isOpen = openIndex === i;
             return (
@@ -42,7 +42,7 @@ export default function Faq() {
                 <button
                   type="button"
                   onClick={() => setOpenIndex(isOpen ? null : i)}
-                  className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left font-medium text-ink"
+                  className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left font-medium text-cream"
                   aria-expanded={isOpen}
                 >
                   {faq.q}

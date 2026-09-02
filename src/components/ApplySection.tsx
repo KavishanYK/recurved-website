@@ -6,7 +6,7 @@ import Wave from "./Wave";
 export default function ApplySection() {
   return (
     <section id="apply" className="relative scroll-mt-10 overflow-hidden bg-dark px-5 py-16 text-cream sm:py-24">
-      <Wave position="top" color="var(--color-cream)" />
+      <Wave position="top" color="var(--background)" />
       <Reveal className="mx-auto max-w-2xl text-center">
         <h2 className="font-serif text-2xl font-semibold sm:text-3xl">
           One Founding Client spot available

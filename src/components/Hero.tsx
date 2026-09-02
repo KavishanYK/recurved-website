@@ -18,11 +18,11 @@ export default function Hero() {
       className="mx-auto flex min-h-[100svh] max-w-3xl scroll-mt-16 flex-col justify-center px-5 py-12"
     >
       <motion.div initial={initial} animate={animate} transition={{ duration: 0.6, ease: "easeOut" }}>
-        <h1 className="mb-5 min-h-[2.6em] font-serif text-3xl font-semibold leading-tight text-dark sm:min-h-[2.3em] sm:text-5xl">
+        <h1 className="mb-5 min-h-[2.6em] font-serif text-3xl font-semibold leading-tight text-cream sm:min-h-[2.3em] sm:text-5xl">
           <TextType
             as="span"
             text={[LINE_ONE, LINE_TWO]}
-            textColors={["var(--color-dark)", "var(--color-accent)"]}
+            textColors={["var(--color-cream)", "var(--color-accent)"]}
             loop
             showCursor
             typingSpeed={16}
@@ -50,8 +50,8 @@ export default function Hero() {
         transition={{ duration: 0.6, delay: shouldReduceMotion ? 0 : 0.2, ease: "easeOut" }}
         className="relative mt-10 max-w-md sm:mt-12"
       >
-        <div className="overflow-hidden rounded-xl border border-black/5 bg-white shadow-sm">
-          <div className="flex items-center gap-1.5 bg-cream px-4 py-2.5">
+        <div className="overflow-hidden rounded-xl border border-white/10 bg-surface shadow-sm">
+          <div className="flex items-center gap-1.5 bg-black/30 px-4 py-2.5">
             <span className="h-2 w-2 rounded-full bg-accent/25" />
             <span className="h-2 w-2 rounded-full bg-accent/25" />
             <span className="h-2 w-2 rounded-full bg-accent/25" />

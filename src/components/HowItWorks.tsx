@@ -19,18 +19,18 @@ export default function HowItWorks() {
   return (
     <section id="how-it-works" className="mx-auto max-w-4xl scroll-mt-16 px-5 py-14 sm:py-20">
       <Reveal>
-        <h2 className="text-center font-serif text-2xl font-semibold text-dark sm:text-3xl">
+        <h2 className="text-center font-serif text-2xl font-semibold text-cream sm:text-3xl">
           How it works
         </h2>
       </Reveal>
       <ol className="mt-10 grid gap-6 sm:grid-cols-3">
         {steps.map((step, i) => (
           <Reveal key={step.title} delay={i * 0.1} as="li">
-            <div className="h-full rounded-2xl border border-black/5 bg-white p-6 shadow-sm">
+            <div className="h-full rounded-2xl border border-white/10 bg-surface p-6 shadow-sm">
               <span className="flex h-9 w-9 items-center justify-center rounded-full bg-accent text-sm font-semibold text-white">
                 {i + 1}
               </span>
-              <h3 className="mt-4 font-semibold text-dark">{step.title}</h3>
+              <h3 className="mt-4 font-semibold text-cream">{step.title}</h3>
               <p className="mt-2 text-sm text-ink/75">{step.body}</p>
             </div>
           </Reveal>

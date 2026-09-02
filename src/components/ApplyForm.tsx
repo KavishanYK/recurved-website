@@ -77,8 +77,8 @@ export default function ApplyForm() {
 
   if (status === "success") {
     return (
-      <div className="rounded-2xl border border-accent/20 bg-white p-8 text-center shadow-lg shadow-black/10">
-        <h3 className="font-serif text-xl font-semibold text-dark">
+      <div className="rounded-2xl border border-accent/20 bg-surface p-8 text-center shadow-lg shadow-black/30">
+        <h3 className="font-serif text-xl font-semibold text-cream">
           Thanks — your application is in!
         </h3>
         <p className="mt-2 text-ink/75">
@@ -89,7 +89,7 @@ export default function ApplyForm() {
   }
 
   return (
-    <div className="rounded-2xl border border-black/5 bg-white p-6 shadow-lg shadow-black/10 sm:p-8">
+    <div className="rounded-2xl border border-white/10 bg-surface p-6 shadow-lg shadow-black/30 sm:p-8">
       <Stepper
         validateStep={validateStep}
         onStepChange={() => setTouchedStep(null)}
@@ -113,8 +113,8 @@ export default function ApplyForm() {
                 type="text"
                 value={values[f.key]}
                 onChange={(e) => updateValue(f.key, e.target.value)}
-                className={`mt-2 w-full rounded-lg border px-4 py-3 text-base focus:outline-none ${
-                  isInvalid ? "border-red-400" : "border-black/10 focus:border-accent"
+                className={`mt-2 w-full rounded-lg border bg-black/20 px-4 py-3 text-base text-cream focus:outline-none ${
+                  isInvalid ? "border-red-400" : "border-white/15 focus:border-accent"
                 }`}
               />
               {isInvalid && <p className="mt-1.5 text-sm text-red-600">This field is required.</p>}

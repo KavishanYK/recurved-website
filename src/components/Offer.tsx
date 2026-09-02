@@ -47,7 +47,7 @@ export default function Offer() {
 
   return (
     <section id="offer" className="mx-auto max-w-3xl scroll-mt-16 px-5 py-14 sm:py-20">
-      <h2 className="text-center font-serif text-2xl font-semibold text-dark sm:text-3xl">
+      <h2 className="text-center font-serif text-2xl font-semibold text-cream sm:text-3xl">
         The Founding Client Offer
       </h2>
 
@@ -65,7 +65,7 @@ export default function Offer() {
             <motion.div
               key={benefit.title}
               variants={item}
-              className="flex items-start gap-4 rounded-xl border border-black/5 bg-white p-5 shadow-sm"
+              className="flex items-start gap-4 rounded-xl border border-white/10 bg-surface p-5 shadow-sm"
             >
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent">
                 <Icon className="h-5 w-5 text-white" />

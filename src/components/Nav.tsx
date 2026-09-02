@@ -3,7 +3,7 @@
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
-import recurvedLogo from "@/app/images/Recurved Logo black.png";
+import recurvedLogo from "@/app/images/Recurved Logo white.png";
 
 const links = [
   { href: "#offer", label: "Offer" },
@@ -15,7 +15,7 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-black/5 bg-cream">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-dark">
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-5 py-4">
         <a href="#top" aria-label="Recurved home" onClick={() => setOpen(false)}>
           <Image src={recurvedLogo} alt="Recurved" className="h-9 w-auto" priority />
@@ -47,7 +47,7 @@ export default function Nav() {
         </div>
       </nav>
       {open && (
-        <div className="border-t border-black/5 bg-cream px-5 py-3 sm:hidden">
+        <div className="border-t border-white/10 bg-dark px-5 py-3 sm:hidden">
           <div className="flex flex-col gap-1 text-sm font-medium text-ink/80">
             {links.map((link) => (
               <a
