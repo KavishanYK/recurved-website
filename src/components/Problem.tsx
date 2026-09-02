@@ -1,3 +1,7 @@
+"use client";
+
+import Lottie from "lottie-react";
+import loadingAnimation from "@/app/animations/Website Tab Loading Animation.json";
 import Reveal from "./Reveal";
 import Wave from "./Wave";
 
@@ -6,6 +10,7 @@ export default function Problem() {
     <section className="relative flex min-h-[100svh] items-center overflow-hidden bg-dark px-5 py-16 text-cream sm:py-24">
       <Wave position="top" color="var(--background)" />
       <Reveal className="mx-auto max-w-3xl text-center">
+        <Lottie animationData={loadingAnimation} loop className="mx-auto h-32 w-32" />
         <h2 className="font-serif text-3xl font-semibold sm:text-5xl">
           If your business isn&apos;t easy to find online, you&apos;re losing
           customers to whoever is.

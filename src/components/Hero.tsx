@@ -14,7 +14,7 @@ export default function Hero() {
   const animate = { opacity: 1, y: 0 };
 
   return (
-    <section id="top" className="relative flex min-h-[100svh] scroll-mt-16 items-center overflow-hidden">
+    <section id="top" className="relative flex min-h-[100svh] scroll-mt-16 items-center overflow-hidden bg-background">
       <div className="absolute inset-0 -z-10">
         <MoltenMetal
           color1="#0a0812"
