@@ -3,10 +3,10 @@ import Wave from "./Wave";
 
 export default function Problem() {
   return (
-    <section className="relative overflow-hidden bg-teal-dark px-5 py-16 text-cream sm:py-24">
+    <section className="relative flex min-h-[100svh] items-center overflow-hidden bg-dark px-5 py-16 text-cream sm:py-24">
       <Wave position="top" color="var(--color-cream)" />
       <Reveal className="mx-auto max-w-3xl text-center">
-        <h2 className="text-2xl font-semibold sm:text-3xl">
+        <h2 className="font-serif text-3xl font-semibold sm:text-5xl">
           If your business isn&apos;t easy to find online, you&apos;re losing
           customers to whoever is.
         </h2>

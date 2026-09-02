@@ -22,7 +22,7 @@ export default function Nav() {
         </a>
         <div className="hidden gap-6 text-sm font-medium text-ink/80 sm:flex">
           {links.map((link) => (
-            <a key={link.href} href={link.href} className="hover:text-teal">
+            <a key={link.href} href={link.href} className="hover:text-accent">
               {link.label}
             </a>
           ))}
@@ -30,7 +30,7 @@ export default function Nav() {
         <div className="flex items-center gap-2 sm:gap-0">
           <a
             href="#apply"
-            className="rounded-full bg-terracotta px-4 py-2 text-sm font-semibold text-white transition hover:bg-terracotta/90"
+            className="rounded-full bg-accent px-4 py-2 text-sm font-semibold text-white transition hover:bg-accent/90"
             onClick={() => setOpen(false)}
           >
             Apply
@@ -54,7 +54,7 @@ export default function Nav() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="rounded-lg px-2 py-3 hover:bg-teal/10 hover:text-teal"
+                className="rounded-lg px-2 py-3 hover:bg-accent/10 hover:text-accent"
               >
                 {link.label}
               </a>

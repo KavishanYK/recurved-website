@@ -7,10 +7,12 @@ import HowItWorks from "@/components/HowItWorks";
 import Faq from "@/components/Faq";
 import ApplySection from "@/components/ApplySection";
 import Footer from "@/components/Footer";
+import StoryThread from "@/components/StoryThread";
 
 export default function Home() {
   return (
     <>
+      <StoryThread />
       <Nav />
       <main className="flex-1">
         <Hero />

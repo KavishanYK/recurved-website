@@ -1,7 +1,7 @@
 "use client";
 
 import { Flame, MessageSquareHeart, Receipt, Search, Smartphone } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { motion, useReducedMotion } from "motion/react";
 
 const benefits = [
   {
@@ -32,60 +32,52 @@ const benefits = [
   },
 ];
 
+const container = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.12 } },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 16 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" as const } },
+};
+
 export default function Offer() {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const node = sectionRef.current;
-    if (!node) return;
-
-    // Plays the reveal once, right when the section scrolls into view.
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.2 }
-    );
-
-    observer.observe(node);
-    return () => observer.disconnect();
-  }, []);
+  const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section id="offer" ref={sectionRef} className="mx-auto max-w-3xl scroll-mt-16 px-5 py-14 sm:py-20">
-      <h2 className="text-center text-2xl font-semibold text-teal-dark sm:text-3xl">
+    <section id="offer" className="mx-auto max-w-3xl scroll-mt-16 px-5 py-14 sm:py-20">
+      <h2 className="text-center font-serif text-2xl font-semibold text-dark sm:text-3xl">
         The Founding Client Offer
       </h2>
 
-      <div className="mt-10 flex flex-col gap-4">
-        {benefits.map((benefit, i) => {
+      <motion.div
+        className="mt-10 flex flex-col gap-4"
+        initial={shouldReduceMotion ? false : "hidden"}
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={container}
+      >
+        {benefits.map((benefit) => {
           const Icon = benefit.icon;
 
           return (
-            <div
+            <motion.div
               key={benefit.title}
-              className="flex items-start gap-4 rounded-xl border border-black/5 bg-white p-5 shadow-sm transition-all duration-500 ease-out"
-              style={{
-                opacity: visible ? 1 : 0,
-                transform: visible ? "translateY(0)" : "translateY(16px)",
-                transitionDelay: `${i * 120}ms`,
-              }}
+              variants={item}
+              className="flex items-start gap-4 rounded-xl border border-black/5 bg-white p-5 shadow-sm"
             >
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-teal">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent">
                 <Icon className="h-5 w-5 text-white" />
               </div>
               <div>
                 <p className="mb-1 font-medium text-ink">{benefit.title}</p>
                 <p className="text-sm leading-relaxed text-ink/70">{benefit.description}</p>
               </div>
-            </div>
+            </motion.div>
           );
         })}
-      </div>
+      </motion.div>
     </section>
   );
 }

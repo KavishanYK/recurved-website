@@ -5,10 +5,10 @@ export default function WhyStudent() {
   return (
     <section className="bg-white/60 px-5 py-16 sm:py-20">
       <Reveal className="mx-auto max-w-3xl text-center">
-        <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-teal text-white">
+        <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-accent text-white">
           <GraduationCap className="h-6 w-6" />
         </span>
-        <h2 className="mt-4 text-2xl font-semibold text-teal-dark sm:text-3xl">
+        <h2 className="mt-4 font-serif text-2xl font-semibold text-dark sm:text-3xl">
           Why work with a masters student instead of an agency?
         </h2>
         <p className="mt-5 text-lg text-ink/80">

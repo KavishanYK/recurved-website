@@ -5,7 +5,7 @@
 }
 
 .step-circle-container {
-  --stepper-accent: var(--color-teal);
+  --stepper-accent: var(--color-accent);
   --stepper-inactive: color-mix(in srgb, var(--color-ink) 10%, transparent);
   --stepper-inactive-fg: color-mix(in srgb, var(--color-ink) 45%, transparent);
   width: 100%;
@@ -80,7 +80,7 @@
 }
 
 .next-button:hover {
-  background-color: color-mix(in srgb, var(--color-terracotta) 90%, black);
+  background-color: color-mix(in srgb, var(--color-accent) 90%, black);
 }
 
 .step-indicator {

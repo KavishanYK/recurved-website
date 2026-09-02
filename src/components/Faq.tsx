@@ -27,10 +27,10 @@ export default function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="scroll-mt-16 border-t border-teal/15 bg-white/55 px-5 py-14 sm:py-20">
+    <section id="faq" className="scroll-mt-16 border-t border-accent/15 bg-white/55 px-5 py-14 sm:py-20">
       <div className="mx-auto max-w-3xl">
         <Reveal>
-          <h2 className="text-center text-2xl font-semibold text-teal-dark sm:text-3xl">
+          <h2 className="text-center font-serif text-2xl font-semibold text-dark sm:text-3xl">
             Questions you might have
           </h2>
         </Reveal>
@@ -46,7 +46,7 @@ export default function Faq() {
                   aria-expanded={isOpen}
                 >
                   {faq.q}
-                  <span className="text-teal">{isOpen ? "−" : "+"}</span>
+                  <span className="text-accent">{isOpen ? "−" : "+"}</span>
                 </button>
                 <AnimatePresence initial={false}>
                   {isOpen && (
